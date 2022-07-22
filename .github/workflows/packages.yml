@@ -1,0 +1,23 @@
+name: GitHub Packages
+on: {release: {types: [published]}}
+jobs:
+  packages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+    
+    - uses: actions/checkout@v3
+    
+    - uses: actions/setup-java@v3
+      with:
+        distribution: temurin
+        java-version: '17'
+        cache: maven
+        server-id: github
+    
+    - name: Package with Maven
+      run: mvn -batch-mode package --file pom.xml
+    
+    - name: Publish to GitHub Packages
+      run: mvn deploy
+      env: {GITHUB_TOKEN: "${{github.token}}"}

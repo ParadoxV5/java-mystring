@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>xyz.paradoxv5</groupId>
+  <artifactId>mystring</artifactId>
+  <name>mystring</name>
+  <version>1.0</version>
+  
+  <developers><developer>
+    <id>ParadoxV5</id>
+    <url>https://github.com/ParadoxV5/</url>
+  </developer></developers>
+  <licenses><license>
+    <name>BSL-1.0</name>
+    <comments>Boost Software License 1.0</comments>
+    <url>https://www.boost.org/users/license.html</url>
+  </license></licenses>
+  
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
+    <plugins><plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.10.1</version>
+      <configuration><release>17</release></configuration>
+    </plugin></plugins>
+  </build>
+  <properties><project.build.sourceEncoding>UTF-8</project.build.sourceEncoding></properties>
+  
+  <dependencies><dependency>
+    <groupId>org.jetbrains</groupId>
+    <artifactId>annotations</artifactId>
+    <version>23.0.0</version>
+  </dependency></dependencies>
+  
+  <scm>
+    <developerConnection>scm:git:https://github.com/ParadoxV5/java-mystring.git</developerConnection>
+    <url>https://github.com/ParadoxV5/java-mystring</url>
+  </scm>
+  <distributionManagement><repository>
+    <id>github</id>
+    <name>GitHub Packages</name>
+    <url>https://maven.pkg.github.com/ParadoxV5/java-mystring</url>
+  </repository></distributionManagement>
+  
+</project>
