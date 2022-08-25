@@ -16,9 +16,6 @@ jobs:
         java-version: '17'
         cache: maven
     
-    - name: Package with Maven
-      run: mvn -batch-mode package
-    
-    - name: Publish to GitHub Packages
-      run: mvn deploy
+    - name: Package with Maven & Publish to GitHub Packages
+      run: mvn -batch-mode deploy
       env: {GITHUB_TOKEN: "${{github.token}}"}

@@ -18,8 +18,10 @@ in a concrete piece of code.
 I originally prepared this to keep my Java experience fresh, but as the project develops,
 [JetBrains annotations](https://github.com/JetBrains/java-annotations),
 [Maven (`pom.xml`)](https://maven.apache.org/pom.html) and
-[GitHub Actions & Packages](https://docs.github.com/en/actions/publishing-packages/publishing-java-packages-with-maven#publishing-packages-to-github-packages)
-joined the party too. 
+[GitHub Packages](https://docs.github.com/en/actions/publishing-packages/publishing-java-packages-with-maven#publishing-packages-to-github-packages)
+& JavaDoc
+[GitHub Pages](https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/)
+via GitHub Actions joined the party too. 
 
 
 ## License
