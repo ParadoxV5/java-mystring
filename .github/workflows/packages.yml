@@ -1,22 +1,23 @@
 name: GitHub Packages
 on: {release: {types: [published]}}
 jobs:
-  packages:
+  package:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
     
     - uses: actions/checkout@v3
+      with:
+        submodules: recursive
     
     - uses: actions/setup-java@v3
       with:
         distribution: temurin
         java-version: '17'
         cache: maven
-        server-id: github
     
     - name: Package with Maven
-      run: mvn -batch-mode package --file pom.xml
+      run: mvn -batch-mode package
     
     - name: Publish to GitHub Packages
       run: mvn deploy

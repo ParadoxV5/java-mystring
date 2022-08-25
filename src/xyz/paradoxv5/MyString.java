@@ -11,7 +11,7 @@ import java.util.*;
     <a href="https://github.com/ParadoxV5/">ParadoxV5</a>.
     <a href="https://www.boost.org/LICENSE_1_0.txt">Boost Software License 1.0</a>
   @version
-    {@value #serialVersionUID}.0
+    {@value #serialVersionUID}.0.1
 */
 public class MyString implements CharSequence, Comparable<@NotNull CharSequence>, Cloneable, java.io.Serializable {
   @java.io.Serial private static final long serialVersionUID = 1;
